@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/Player.gd" type="Script" id=2]
+
+[sub_resource type="StreamTexture" id=2]
+load_path = "res://.import/PlayerAnimations.png-53a0b27a2345d5985b6ecb1721819b63.stex"
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2.61538, 0.9 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "WalkDown"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 2, 1 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "WalkUp"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 3, 4 ]
+}
+
+[node name="Player" type="KinematicBody2D" groups=["Player"]]
+position = Vector2( 0, 10 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = SubResource( 2 )
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 5 )
+scale = Vector2( 0.764706, 1.11111 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/WalkDown = SubResource( 3 )
+anims/WalkUp = SubResource( 4 )
