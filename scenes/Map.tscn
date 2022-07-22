@@ -1,10 +1,13 @@
-[gd_scene load_steps=73 format=2]
+[gd_scene load_steps=95 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Tileset.png" type="Texture" id=2]
 [ext_resource path="res://assets/shader.png" type="Texture" id=3]
 [ext_resource path="res://scripts/Map.gd" type="Script" id=4]
 [ext_resource path="res://assets/Filler.png" type="Texture" id=5]
+[ext_resource path="res://scenes/Wumpus.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/WumpusFlat.png" type="Texture" id=7]
+[ext_resource path="res://assets/fonts/PublicPixel-0W5Kv.ttf" type="DynamicFontData" id=8]
 
 [sub_resource type="TileSet" id=80]
 2/name = "Filler.png 2"
@@ -21,6 +24,10 @@
 2/shape_one_way_margin = 0.0
 2/shapes = [  ]
 2/z_index = 0
+
+[sub_resource type="NavigationPolygon" id=81]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -137,6 +144,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/navigation = SubResource( 81 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 0/shape_one_way = false
@@ -858,6 +866,18 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 34/shapes = [  ]
 34/z_index = 0
 
+[sub_resource type="NavigationPolygon" id=82]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=83]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=84]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
 [sub_resource type="ConvexPolygonShape2D" id=36]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
@@ -915,6 +935,22 @@ points = PoolVector2Array( 2.9485, 0.135513, 10.463, 0.0233536, 10.2387, 3.83669
 [sub_resource type="ConvexPolygonShape2D" id=68]
 points = PoolVector2Array( 6.2554, 0.0233612, 12.272, 0, 12.272, 4.00716, 6.2554, 4.061 )
 
+[sub_resource type="NavigationPolygon" id=85]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=86]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=87]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=88]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
 [sub_resource type="ConvexPolygonShape2D" id=69]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
@@ -944,6 +980,42 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=78]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="NavigationPolygon" id=89]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=90]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=91]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=92]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=93]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=94]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=95]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=96]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=97]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="TileSet" id=42]
 0/name = "Tileset.png 0"
@@ -1604,20 +1676,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 37/z_index = 0
-39/name = "Tileset.png 39"
-39/texture = ExtResource( 2 )
-39/tex_offset = Vector2( 0, 0 )
-39/modulate = Color( 1, 1, 1, 1 )
-39/region = Rect2( 48, 32, 16, 16 )
-39/tile_mode = 0
-39/occluder_offset = Vector2( 0, 0 )
-39/navigation_offset = Vector2( 0, 0 )
-39/shape_offset = Vector2( 0, 0 )
-39/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-39/shape_one_way = false
-39/shape_one_way_margin = 0.0
-39/shapes = [  ]
-39/z_index = 0
 40/name = "Tileset.png 40"
 40/texture = ExtResource( 2 )
 40/tex_offset = Vector2( 0, 0 )
@@ -1647,6 +1705,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 41/tile_mode = 0
 41/occluder_offset = Vector2( 0, 0 )
 41/navigation_offset = Vector2( 0, 0 )
+41/navigation = SubResource( 85 )
 41/shape_offset = Vector2( 0, 0 )
 41/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 41/shape_one_way = false
@@ -1661,6 +1720,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 42/tile_mode = 0
 42/occluder_offset = Vector2( 0, 0 )
 42/navigation_offset = Vector2( 0, 0 )
+42/navigation = SubResource( 86 )
 42/shape_offset = Vector2( 0, 0 )
 42/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 42/shape_one_way = false
@@ -1675,6 +1735,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 43/tile_mode = 0
 43/occluder_offset = Vector2( 0, 0 )
 43/navigation_offset = Vector2( 0, 0 )
+43/navigation = SubResource( 87 )
 43/shape_offset = Vector2( 0, 0 )
 43/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 43/shape_one_way = false
@@ -1689,6 +1750,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 44/tile_mode = 0
 44/occluder_offset = Vector2( 0, 0 )
 44/navigation_offset = Vector2( 0, 0 )
+44/navigation = SubResource( 88 )
 44/shape_offset = Vector2( 0, 0 )
 44/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 44/shape_one_way = false
@@ -1955,6 +2017,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 58/tile_mode = 0
 58/occluder_offset = Vector2( 0, 0 )
 58/navigation_offset = Vector2( 0, 0 )
+58/navigation = SubResource( 89 )
 58/shape_offset = Vector2( 0, 0 )
 58/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 58/shape_one_way = false
@@ -1969,6 +2032,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 59/tile_mode = 0
 59/occluder_offset = Vector2( 0, 0 )
 59/navigation_offset = Vector2( 0, 0 )
+59/navigation = SubResource( 90 )
 59/shape_offset = Vector2( 0, 0 )
 59/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 59/shape_one_way = false
@@ -1983,6 +2047,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 60/tile_mode = 0
 60/occluder_offset = Vector2( 0, 0 )
 60/navigation_offset = Vector2( 0, 0 )
+60/navigation = SubResource( 91 )
 60/shape_offset = Vector2( 0, 0 )
 60/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 60/shape_one_way = false
@@ -1997,6 +2062,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 61/tile_mode = 0
 61/occluder_offset = Vector2( 0, 0 )
 61/navigation_offset = Vector2( 0, 0 )
+61/navigation = SubResource( 92 )
 61/shape_offset = Vector2( 0, 0 )
 61/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 61/shape_one_way = false
@@ -2011,6 +2077,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 62/tile_mode = 0
 62/occluder_offset = Vector2( 0, 0 )
 62/navigation_offset = Vector2( 0, 0 )
+62/navigation = SubResource( 93 )
 62/shape_offset = Vector2( 0, 0 )
 62/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 62/shape_one_way = false
@@ -2025,6 +2092,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 63/tile_mode = 0
 63/occluder_offset = Vector2( 0, 0 )
 63/navigation_offset = Vector2( 0, 0 )
+63/navigation = SubResource( 94 )
 63/shape_offset = Vector2( 0, 0 )
 63/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 63/shape_one_way = false
@@ -2039,6 +2107,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 64/tile_mode = 0
 64/occluder_offset = Vector2( 0, 0 )
 64/navigation_offset = Vector2( 0, 0 )
+64/navigation = SubResource( 95 )
 64/shape_offset = Vector2( 0, 0 )
 64/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 64/shape_one_way = false
@@ -2053,6 +2122,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 65/tile_mode = 0
 65/occluder_offset = Vector2( 0, 0 )
 65/navigation_offset = Vector2( 0, 0 )
+65/navigation = SubResource( 96 )
 65/shape_offset = Vector2( 0, 0 )
 65/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 65/shape_one_way = false
@@ -2067,6 +2137,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 66/tile_mode = 0
 66/occluder_offset = Vector2( 0, 0 )
 66/navigation_offset = Vector2( 0, 0 )
+66/navigation = SubResource( 97 )
 66/shape_offset = Vector2( 0, 0 )
 66/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 66/shape_one_way = false
@@ -2571,6 +2642,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 102/tile_mode = 0
 102/occluder_offset = Vector2( 0, 0 )
 102/navigation_offset = Vector2( 0, 0 )
+102/navigation = SubResource( 82 )
 102/shape_offset = Vector2( 0, 0 )
 102/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 102/shape_one_way = false
@@ -2591,6 +2663,43 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 103/shape_one_way_margin = 0.0
 103/shapes = [  ]
 103/z_index = 0
+104/name = "Tileset.png 104"
+104/texture = ExtResource( 2 )
+104/tex_offset = Vector2( 0, 0 )
+104/modulate = Color( 1, 1, 1, 1 )
+104/region = Rect2( 32, 80, 16, 16 )
+104/tile_mode = 0
+104/occluder_offset = Vector2( 0, 0 )
+104/navigation_offset = Vector2( 0, 0 )
+104/navigation = SubResource( 83 )
+104/shape_offset = Vector2( 0, 0 )
+104/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+104/shape_one_way = false
+104/shape_one_way_margin = 0.0
+104/shapes = [  ]
+104/z_index = 0
+105/name = "Tileset.png 105"
+105/texture = ExtResource( 2 )
+105/tex_offset = Vector2( 0, 0 )
+105/modulate = Color( 1, 1, 1, 1 )
+105/region = Rect2( 48, 80, 16, 16 )
+105/tile_mode = 0
+105/occluder_offset = Vector2( 0, 0 )
+105/navigation_offset = Vector2( 0, 0 )
+105/navigation = SubResource( 84 )
+105/shape_offset = Vector2( 0, 0 )
+105/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+105/shape_one_way = false
+105/shape_one_way_margin = 0.0
+105/shapes = [  ]
+105/z_index = 0
+
+[sub_resource type="CircleShape2D" id=98]
+radius = 2.0
+
+[sub_resource type="DynamicFont" id=99]
+size = 8
+font_data = ExtResource( 8 )
 
 [node name="Map" type="Node2D"]
 script = ExtResource( 4 )
@@ -2621,20 +2730,59 @@ current = true
 [node name="CanvasLayer" type="CanvasLayer" parent="Player/Camera"]
 
 [node name="Shader" type="Sprite" parent="Player/Camera/CanvasLayer"]
-visible = false
 position = Vector2( 48, 55 )
 scale = Vector2( 1.3125, 1.25 )
 texture = ExtResource( 3 )
 
-[node name="Spawn" type="Node2D" parent="."]
+[node name="Wumpus" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( -31, -5 )
+
+[node name="Area2D_1" type="Area2D" parent="Wumpus"]
+position = Vector2( 31, 5 )
+
+[node name="Hitbox" type="CollisionShape2D" parent="Wumpus/Area2D_1"]
+shape = SubResource( 98 )
+
+[node name="WumpusSpawn" type="Node2D" parent="."]
+visible = false
+position = Vector2( -27, 6 )
+
+[node name="WumpusSpawnTimer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
 
 [node name="SpawnContainer" type="Node" parent="."]
 
-[node name="Spawn_0" type="Position2D" parent="SpawnContainer" groups=["spawn"]]
-position = Vector2( -98, 0 )
+[node name="Spawn_0" type="Position2D" parent="SpawnContainer" groups=["instance", "spawn"]]
+position = Vector2( -367, 291 )
 
-[node name="Spawn_1" type="Position2D" parent="SpawnContainer" groups=["spawn"]]
-position = Vector2( -98, 0 )
+[node name="Sprite" type="Sprite" parent="SpawnContainer/Spawn_0"]
+texture = ExtResource( 7 )
 
-[node name="Spawn_2" type="Position2D" parent="SpawnContainer" groups=["spawn"]]
-position = Vector2( -98, 0 )
+[node name="Spawn_1" type="Position2D" parent="SpawnContainer" groups=["instance", "spawn"]]
+position = Vector2( -371, 148 )
+
+[node name="Sprite" type="Sprite" parent="SpawnContainer/Spawn_1"]
+texture = ExtResource( 7 )
+
+[node name="Spawn_2" type="Position2D" parent="SpawnContainer" groups=["instance", "spawn"]]
+position = Vector2( -244, 24 )
+
+[node name="Sprite" type="Sprite" parent="SpawnContainer/Spawn_2"]
+texture = ExtResource( 7 )
+
+[node name="GameTimerLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="GameTimerLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Timer" type="Label" parent="GameTimerLayer/Control"]
+margin_right = 64.0
+margin_bottom = 10.0
+custom_fonts/font = SubResource( 99 )
+text = "00:00:00"
+
+[connection signal="body_entered" from="Wumpus/Area2D_1" to="Player" method="_on_Area2D_1_body_entered"]
+[connection signal="timeout" from="WumpusSpawnTimer" to="." method="_on_WumpusSpawnTimer_timeout"]
