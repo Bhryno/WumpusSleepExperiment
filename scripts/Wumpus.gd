@@ -33,7 +33,10 @@ func _on_Area2D_body_entered(body):
 		queue_free()
 		get_tree().paused = true
 		visible = true
+		$Hit.play()
+	$SFX.play()
 
 func _on_Area2D_body_exited(body):
 	player = null
 	sprite.set_texture(wumpus_flat)
+	$SFX.stop()
