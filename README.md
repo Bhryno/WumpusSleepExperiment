@@ -207,7 +207,7 @@ Lines 510-540 are single-key double-value data dictionaries(tri-consumers) for a
  - Unprivated repository
 
 ## Structure Chart
-![[Structure Chart.png]]
+!["Structure Chart"](./docs/Structure Chart.png)
 ## Data Dictionary
 | **Name**          | **Data Type** | **Module**                                 | **Purpose**                                                          |
 |-------------------|---------------|--------------------------------------------|----------------------------------------------------------------------|
