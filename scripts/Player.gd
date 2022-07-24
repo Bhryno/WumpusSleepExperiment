@@ -10,13 +10,12 @@ var bullet_speed = 150
 
 var can_shoot: bool
 
+func _ready():
+	$Menu/Lose.pause_mode = PAUSE_MODE_PROCESS
+
 # Event for physics processing
 func _physics_process(delta):
 	read_input()
-	
-func _on_Area2D_1_body_entered(body):
-	if "Wumpus" in body.name:
-		kill()
 
 func read_input():
 	velocity = Vector2()
@@ -62,4 +61,9 @@ func fire():
 		get_tree().get_root().call_deferred("add_child", bullet_instance)
 
 func kill():
-	pass
+	get_node("Menu/Lose").visible = true
+	get_node("Menu/Lose").get_tree().paused = true
+
+func _on_Area2D_body_entered(body):
+	if "Wumpus" in body.name:
+		kill()
