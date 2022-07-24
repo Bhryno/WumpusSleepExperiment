@@ -1,7 +1,7 @@
 extends MarginContainer
 
 # Map scene getter
-const first_scene = preload("res://scenes/Map.tscn")
+var first_scene = load("res://scenes/Map.tscn")
 
 # ">" selectors
 onready var selector_1 = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer/Selector
