@@ -182,6 +182,7 @@ Lines 510-540 are single-key double-value data dictionaries(tri-consumers) for a
  - Created the Main Menu for the game with a lot of boilerplate code
  - To reduce the code, I was planning to use a separate compiler/language such as HTML or Java to be pasted as an ExternalNode, however after many compatibility errors later, I just resorted to using the Engine's built-in UI creator.
  - Afterwards, I created the Pause, Win and Lose menus with all shared the common bug of not being able to pause the game or render on the screen - this was fixed by changing the "pause mode" from "Inherit" to "Process" and incrementing the layer from 1 to a ridiculously large number of 100.
+ - Simlar to Yob taking inspiration from other games, my UI theme was heavily based off the Undertale style.
 ### 14/07/2022
  - Another fatal bug was that the Game for no reason would automatically switch the menus' "pause mode" from "Process" to "Inherit". In the end, all that was needed was to set manually hard code it into it's script by adding the line ```self.pause_mode = PAUSE_MODE_PROCESS``` into the ***_ready*** override function.
  - This also solved another unintentional bug of (later in the game-making process) the objective orbs not being able to be picked up once a menu was opened, which there was no explanation for.
